@@ -1,67 +1,65 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #222;
-  font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, #3a3a3a, #1a1a1a);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .calculadora {
-  background: #333;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  width: 260px;
-  text-align: center;
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    width: 320px;
 }
-display {
-  width: 100%;
-  height: 50px;
-  font-size: 2em;
-  text-align: right;
-  padding: 10px;
-  border: none;
-  outline: none;
-  background: #000;
-  color: #fff;
-  margin-bottom: 10px;
-  border-radius: 5px;
+
+#display {
+    width: calc(100% - 10px);
+    height: 70px;
+    margin-bottom: 15px;
+    padding: 5px;
+    font-size: 2.5em;
+    text-align: right;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 8px;
+    color: #333;
 }
-teclado {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
+
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
 }
+
 button {
-  width: 60px;
-  height: 60px;
-  font-size: 1.5em;
-  border: none;
-  cursor: pointer;
-  background: #444;
-  color: #fff;
-  border-radius: 5px;
-  transition: 0.3s;
+    padding: 20px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #4d4d4d;
+    color: white;
+    transition: all 0.2s ease;
 }
+
 button:hover {
-  background: #555;
+    background-color: #666;
+    transform: scale(0.98);
 }
 
-button:active {
-  background: #777;
+.limpar {
+    background-color: #ff5555;
 }
 
-button.zero {
-  grid-column: span 2;
-  width: 100%;
+.igual {
+    background-color: #4CAF50;
+    grid-row: span 2;
 }
 
-button:nth-child(4n),
-button:last-child {
-  background: #ff9800;
-}
-
-button:nth-child(4n):hover,
-button:last-child:hover {
-  background: #e68900;
+.zero {
+    grid-column: span 2;
 }
